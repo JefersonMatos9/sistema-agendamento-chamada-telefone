@@ -1,9 +1,9 @@
-package org.example;
+package agendamentoContatos;
 
 import java.util.*;
 
 public class Agendamento {
-    Set<Contatos> Setcontatos;
+    public Set<Contatos> Setcontatos;
 
     //Construtor para inicializar Setcontatos como um TreeSet
     public Agendamento() {
@@ -41,19 +41,43 @@ public class Agendamento {
 
     //Metodo para pesquisar contato
     public void pesquisarContato(String nome) {
+        Scanner scanner = new Scanner(System.in);
+        boolean encontrado = false;
         for (Contatos contato : Setcontatos) {
             if (contato.getNome().equalsIgnoreCase(nome)) {
                 System.out.println("Contato encontrado: " + contato.getNome() + ", " + contato.getNumTelefone());
+                System.out.println("Escolha a opção desejada:");
+                System.out.println("Opção 1 - Ligar.  \nOpção 2 - Enviar Mensagem. \nOpção 3 - Voltar ao Inicio.");
+                int escolha = scanner.nextInt();
+                encontrado = true;
+                switch (escolha) {
+                    case 1:
+                        System.out.println("Ligando...");
+                        break;
+                    case 2:
+                        System.out.println("Enviando Mensagem.");
+                        break;
+                    case 3:
+                        System.out.println("Voltar ao Inicio.");
+                        break;
+                    default:
+                        System.out.println("Opção Invalida.");
+
+                }
                 return;
             }
+
+            }
+        if (!encontrado) {
+            System.out.println("Contato não existe.");
         }
-        System.out.println("Contato não existe.");
     }
 
-    // Metodo para mostrar a lista de contato
-    public void listaContatos() {
-        for (Contatos lista : Setcontatos) {
-            System.out.println(lista.getNome() + "," + lista.getNumTelefone());
+        // Metodo para mostrar a lista de contato
+        public void listaContatos() {
+            for (Contatos lista : Setcontatos) {
+                System.out.println(lista.getNome() + "," + lista.getNumTelefone());
+            }
         }
     }
-}
+

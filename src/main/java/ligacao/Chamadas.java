@@ -1,4 +1,7 @@
-package org.example;
+package ligacao;
+
+import agendamentoContatos.Agendamento;
+import agendamentoContatos.Contatos;
 
 import java.util.Scanner;
 

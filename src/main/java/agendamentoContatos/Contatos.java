@@ -1,4 +1,4 @@
-package org.example;
+package agendamentoContatos;
 
 public class Contatos implements Comparable<Contatos> {
     private String nome;

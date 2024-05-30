@@ -1,4 +1,7 @@
-package org.example;
+package org.classePrincipal;
+
+import agendamentoContatos.Agendamento;
+import ligacao.Chamadas;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -22,17 +25,17 @@ public class Main {
 
        //agendamento.removerContato("Josiane");
 
-        //agendamento.pesquisarContato("Maria");
+        agendamento.pesquisarContato("deco");
        // agendamento.listaContatos();
 
         //Instanciando o objeto chamadas.
         Chamadas chamadas = new Chamadas();
 
         //Transferindo os contatos da agenda para chamada.
-        chamadas.Setcontatos = agendamento.Setcontatos;
+        //chamadas.Setcontatos = agendamento.Setcontatos;
 
         //realizando uma ligação
-        chamadas.realizarChamada();
+        //chamadas.realizarChamada();
 
     }
 }
